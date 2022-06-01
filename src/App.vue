@@ -17,7 +17,7 @@
     import Form from '@/components/Form'
     import List from '@/components/List'
 
-    import  {ref} from 'vue'
+    import {ref} from 'vue'
 
     export default {
         components: {Form, List},
@@ -40,9 +40,7 @@
                 }
             ])
 
-            function handleSubmit(item) {
-                items.push(item)
-            }
+            const handleSubmit = (item) => items.value.push(item)
 
             return {
                 items,
@@ -51,32 +49,4 @@
         }
     }
 
-    // export default {
-    //   components: { Form, List },
-    //   data() {
-    //     return {
-    //       items: [
-    //         {
-    //           id: 1,
-    //           body: 'hello vue 3',
-    //           likes: 12,
-    //           avatar: `https://avatars.dicebear.com/api/male/1.svg`,
-    //           date: new Date(Date.now()).toLocaleString()
-    //         },
-    //         {
-    //           id: 2,
-    //           body: 'hello world',
-    //           likes: 6,
-    //           avatar: `https://avatars.dicebear.com/api/male/2.svg`,
-    //           date: new Date(Date.now()).toLocaleString()
-    //         }
-    //       ]
-    //     }
-    //   },
-    //   methods: {
-    //     handleSubmit(item) {
-    //       this.items.push(item)
-    //     }
-    //   }
-    // }
 </script>
